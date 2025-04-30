@@ -6,6 +6,6 @@
 6. Gör små commits, ange tydligt vad som ingår i varje och commit.
 
 - daily scrum 15min, kort lägesrapport flagga för hjälpbehov
-- projektägaren tar slutliga besluten
+- produktägaren tar slutliga besluten
 - Alla bidrar och vi är i ett lärande stadie, va snälla mot varandra.
 - allt delas upp i sprint scrum rättvis (om det blir för mycket säg till på nästgående dailyscrum)
