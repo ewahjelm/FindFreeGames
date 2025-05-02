@@ -7,24 +7,29 @@
 
 .header {
   background-color: #4d80a0;
-   height: 221px;
-  margin: 0 0 0 0;
-  text-align: center;
-  padding: 10px;
-  font-size: 25px;
-  color: white;
+  height: 221px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 25px;
+  color: white;
 }
 
  .nav {
-  float: left;
+  position: fixed;
+  top: 221px; /* below the header */
+  left: 0;
   width: 20%;
-  height: 100vh;
+  height: calc(100vh - 80px); /* full height minus header */
   background: #f9f9f9;
   padding: 20px;
   border-right: 1px solid #ccc;
+  overflow-y: auto;
 }
 
 
@@ -50,13 +55,15 @@
 
 
 .game-list {
-  float: left;
-  width: 80%;
+   margin-top: 221px;
+  margin-left: 20%;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   background-color: #f1f1f1;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
 
 }
 
