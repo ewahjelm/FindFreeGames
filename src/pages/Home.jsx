@@ -2,8 +2,9 @@ import GameGrid from '../components/GameGrid'
 
 const Home = () => {
     const thisGenre = [
+        'Genre',
         'mmorpg',
-        'shooter',
+        'Shooter',
         'strategy',
         'moba',
         'racing',
@@ -13,40 +14,7 @@ const Home = () => {
         'open-world',
         'survival',
         'pvp',
-        'pve',
-        'pixel',
-        'voxel',
-        'zombie',
-        'turn-based',
-        'first-person',
-        'third-Person',
-        'top-down',
-        'tank',
-        'space',
-        'sailing',
-        'side-scroller',
-        'superhero',
-        'permadeath',
-        'card',
-        'battle-royale',
-        'mmo',
-        'mmofps',
-        'mmotps',
-        '3d',
-        '2d',
-        'anime',
-        'fantasy',
-        'sci-fi',
-        'fighting',
-        'action-rpg',
-        'action',
-        'military',
-        'martial-arts',
-        'flight',
-        'low-spec',
-        'tower-defense',
-        'horror',
-        'mmorts'
+        'pve'
     ]
 
 
@@ -58,7 +26,6 @@ const Home = () => {
 
             <section>
                 <nav className="nav">
-                    <p>Genre</p>
                     <ul>
                         {thisGenre.map((genre) => (
                             <li key={genre}>
@@ -76,6 +43,8 @@ const Home = () => {
                 </nav>
                 <GameGrid />
             </section>
+
+          
         </div>
     )
 }
