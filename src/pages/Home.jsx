@@ -50,6 +50,10 @@ const Home = () => {
         'mmorts'
 
     ]
+    const thisPlatform = [
+        'Browser',
+        'PC'
+    ]
 
 
     return (
@@ -59,8 +63,23 @@ const Home = () => {
             </header>
 
             <section>
-                <p>Genre</p>
                 <nav className="nav">
+                    <p>Platform</p>
+                    <ul>
+                        {thisPlatform.map((platform) => (
+                            <li key={platform}>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="platform-filter"
+                                        value={platform.toLowerCase()}
+                                    />
+                                    {platform}
+                                </label>
+                            </li>
+                        ))}
+                    </ul>
+                    <p>Genre</p>
                     <ul>
                         {thisGenre.map((genre) => (
                             <li key={genre}>
