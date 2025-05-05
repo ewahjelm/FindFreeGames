@@ -25,6 +25,7 @@ const Home = () => {
             </header>
 
             <section>
+                <p>Genre</p>
                 <nav className="nav">
                     <ul>
                         {thisGenre.map((genre) => (
