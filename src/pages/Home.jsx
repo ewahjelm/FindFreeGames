@@ -1,6 +1,8 @@
-import GameGrid from '../components/GameGrid'
+import Footer from "../components/Footer";
+import GameGrid from "../components/GameGrid";
 
 const Home = () => {
+
     const thisGenre = [
         'Genre',
         'mmorpg',
@@ -55,12 +57,11 @@ const Home = () => {
         'PC'
     ]
 
-
-    return (
-        <div>
-            <header className="header">
-                <h2>Free to game</h2>
-            </header>
+  return (
+    <div>
+      <header className="header">
+        <h2>Free to game</h2>
+      </header>
 
             <section>
                 <nav className="nav">
@@ -104,3 +105,4 @@ const Home = () => {
 }
 
 export default Home
+
