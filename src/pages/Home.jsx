@@ -2,7 +2,6 @@ import GameGrid from '../components/GameGrid'
 
 const Home = () => {
     const thisGenre = [
-        'Genre',
         'mmorpg',
         'Shooter',
         'strategy',
@@ -98,7 +97,7 @@ const Home = () => {
                 <GameGrid />
             </section>
 
-          
+
         </div>
     )
 }
