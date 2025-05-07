@@ -7,9 +7,9 @@
 
 .header {
   background-color: #4d80a0;
-  height: 221px;
+  height: 150px;
   width: 100%;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   z-index: 1000;
@@ -20,18 +20,26 @@
   color: white;
 }
 
- .nav {
-  position: fixed;
-  top: 221px; /* below the header */
+.main-layout {
+  display: flex;
+  margin-top: 0;
+}
+
+.nav {
+  /* position: fixed; */
+  top: 150px; /* below the header */
   left: 0;
   width: 20%;
-  height: calc(100vh - 80px); /* full height minus header */
+  height: calc(100vh);
   background: #f9f9f9;
   padding: 20px;
   border-right: 1px solid #ccc;
   overflow-y: auto;
 }
 
+.section-grid {
+  align-items: end;
+}
 
 .nav ul {
   list-style-type: none;
@@ -53,18 +61,16 @@
   accent-color: #007bff;
 }
 
-
 .game-list {
-   margin-top: 221px;
-  margin-left: 20%;
+  /* margin-top: -45%;  BORT! */
+  margin-left: 0; /* Ta bort onödig offset */
   padding: 20px;
+  flex: 1; /* NYTT: Tar upp all plats till höger om nav */
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   background-color: #f1f1f1;
-  height: calc(100vh - 80px);
   overflow-y: auto;
-
 }
 
 .game-card {
@@ -88,19 +94,18 @@
   color: #666;
 }
 
-
 .main-container {
   padding: 10px;
 }
 
-.rectangle {
+/* .rectangle {
   background-color: #333;
   color: white;
   padding: 20px;
   margin-bottom: 20px;
   text-align: center;
   border-radius: 10px;
-}
+} */
 
 .free-to-game,
 .free-to-game-1 {
@@ -108,14 +113,32 @@
   font-weight: bold;
 }
 
-.flex-row-bcf {
+/* .flex-row-bcf {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+} */
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  font-size: 12px;
+  font-weight: bold;
+  height: 120px;
+  align-items: center;
+}
+
+.footer-p {
+  margin-top: 50px;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
   .nav {
     width: 100%;
     float: none;
