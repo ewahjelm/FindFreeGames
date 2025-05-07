@@ -1,5 +1,4 @@
 * {
-  display: fixed;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -21,12 +20,17 @@
   color: white;
 }
 
+.main-layout {
+  display: flex;
+  margin-top: 0;
+}
+
 .nav {
   /* position: fixed; */
   top: 150px; /* below the header */
   left: 0;
   width: 20%;
-  height: calc(100vh - 80px); /* full height minus header */
+  height: calc(100vh);
   background: #f9f9f9;
   padding: 20px;
   border-right: 1px solid #ccc;
@@ -58,14 +62,14 @@
 }
 
 .game-list {
-  margin-top: -45%;
-  margin-left: 20%;
+  /* margin-top: -45%;  BORT! */
+  margin-left: 0; /* Ta bort onödig offset */
   padding: 20px;
+  flex: 1; /* NYTT: Tar upp all plats till höger om nav */
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   background-color: #f1f1f1;
-  /* height: calc(100vh - 80px); */
   overflow-y: auto;
 }
 
@@ -131,6 +135,10 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
   .nav {
     width: 100%;
     float: none;
