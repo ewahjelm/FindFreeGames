@@ -1,7 +1,12 @@
+import { useState } from "react";
+
 import Footer from "../components/Footer";
 import GameGrid from "../components/GameGrid";
 
 const Home = () => {
+  const [selectedGenre, setSelectedGenre] = useState([]);
+  const [selectedPlatform, setSelectedPlatform] = useState([]);
+
   const thisGenre = [
     "mmorpg",
     "Shooter",
@@ -10,46 +15,33 @@ const Home = () => {
     "racing",
     "sports",
     "social",
-    "sandbox",
-    "open-world",
-    "survival",
-    "pvp",
-    "pve",
-    "pixel",
-    "voxel",
-    "zombie",
-    "turn-based",
-    "first-person",
-    "third-person",
-    "top-down",
-    "tank",
-    "space",
-    "sailing",
-    "side-scroller",
-    "superhero",
-    "permadeath",
-    "card",
-    "battle-royale",
     "mmo",
-    "mmofps",
-    "mmotps",
-    "3d",
-    "2d",
-    "anime",
     "fantasy",
-    "sci-fi",
     "fighting",
-    "action-rpg",
     "action",
-    "military",
-    "martial-arts",
-    "flight",
-    "low-spec",
-    "tower-defense",
-    "horror",
-    "mmorts",
   ];
   const thisPlatform = ["Browser", "PC"];
+
+  // If the user checks one of the checkboxes,
+  // the handler adds the tag into selectedGenre/selectedPlatform.
+  // Once it's unchecked, the handler removes the tag from selectedGenre/selectedPlatform
+  const GenreChange = (e) => {
+    const value = e.target.value;
+    if (e.target.checked) {
+      setSelectedGenre([...selectedGenre, value]);
+    } else {
+      setSelectedGenre(selectedGenre.filter((g) => g !== value));
+    }
+  };
+
+  const PlatformChange = (e) => {
+    const value = e.target.value;
+    if (e.target.checked) {
+      setSelectedPlatform([...selectedPlatform, value]);
+    } else {
+      setSelectedPlatform(selectedPlatform.filter((p) => p !== value));
+    }
+  };
 
   return (
     <div>
@@ -69,6 +61,7 @@ const Home = () => {
                     type="checkbox"
                     name="platform-filter"
                     value={platform.toLowerCase()}
+                    onChange={PlatformChange}
                   />
                   {platform}
                 </label>
@@ -86,6 +79,7 @@ const Home = () => {
                     type="checkbox"
                     name="genre-filter"
                     value={genre.toLowerCase()}
+                    onChange={GenreChange}
                   />
                   {genre}
                 </label>
@@ -93,8 +87,12 @@ const Home = () => {
             ))}
           </ul>
         </nav>
-        <GameGrid />
+        <GameGrid
+          selectedGenre={selectedGenre}
+          selectedPlatform={selectedPlatform}
+        />
       </div>
+      <Footer />
     </div>
   );
 };
