@@ -62,10 +62,9 @@
 }
 
 .game-list {
-  /* margin-top: -45%;  BORT! */
-  margin-left: 0; /* Ta bort onödig offset */
+  margin-left: 0;
   padding: 20px;
-  flex: 1; /* NYTT: Tar upp all plats till höger om nav */
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -78,10 +77,13 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 10px;
-  width: 200px;
-  height: 200px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+
+  flex: 1 1 calc(20% - 16px); /* 5 per rad, minus lite för gap */
+  max-width: calc(20% - 16px);
+  height: 200px;
 }
 
 .game-card h3 {
