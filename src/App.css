@@ -29,7 +29,7 @@
   /* position: fixed; */
   top: 150px; /* below the header */
   left: 0;
-  width: 20%;
+  width: 12%;
   height: calc(100vh);
   background: #f9f9f9;
   padding: 20px;
@@ -65,7 +65,7 @@
   margin-left: 0;
   padding: 20px;
   flex: 1;
-  margin-right: 100px;
+  margin-right: 0px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
