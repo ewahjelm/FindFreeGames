@@ -9,3 +9,6 @@
 - produktägaren tar slutliga besluten
 - Alla bidrar och vi är i ett lärande stadie, va snälla mot varandra.
 - allt delas upp i sprint scrum rättvis (om det blir för mycket säg till på nästgående dailyscrum)
+
+
+-
