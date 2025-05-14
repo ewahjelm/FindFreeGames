@@ -6,6 +6,16 @@ import GameGrid from "../components/GameGrid";
 const Home = () => {
   const [selectedGenre, setSelectedGenre] = useState([]);
   const [selectedPlatform, setSelectedPlatform] = useState([]);
+  const [favorites, setFavorites] = useState([]);
+  const [showFavorites, setShowFavorites] = useState(false);
+
+  const toggleFavorite = (gameId) => {
+    if (favorites.includes(gameId)) {
+      setFavorites(favorites.filter((id) => id !== gameId));
+    } else {
+      setFavorites([...favorites, gameId]);
+    }
+  };
 
   const thisGenre = [
     "mmorpg",
@@ -56,7 +66,10 @@ const Home = () => {
           <ul>
             <li>
               <label>
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  onChange={(e) => setShowFavorites(e.target.checked)}
+                />
                 Favorites
               </label>
             </li>
@@ -101,6 +114,9 @@ const Home = () => {
         <GameGrid
           selectedGenre={selectedGenre}
           selectedPlatform={selectedPlatform}
+          favorites={favorites}
+          toggleFavorite={toggleFavorite}
+          showFavorites={showFavorites}
         />
       </div>
       <Footer />
