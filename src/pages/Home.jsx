@@ -51,6 +51,17 @@ const Home = () => {
 
       <div className="main-layout">
         <nav className="nav">
+          <p>Filter by:</p>
+          <br />
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" />
+                Favorites
+              </label>
+            </li>
+            <br />
+          </ul>
           <p>Platform</p>
           <br />
           <ul>
