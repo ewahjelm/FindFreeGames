@@ -7,5 +7,7 @@
 
 - Daily scrum 15min, kort lägesrapport flagga för hjälpbehov
 - Projektägaren tar slutliga besluten
+- daily scrum 15min, kort lägesrapport flagga för hjälpbehov
+- produktägaren tar slutliga besluten
 - Alla bidrar och vi är i ett lärande stadie, va snälla mot varandra.
 - Allt delas upp i sprint scrum rättvis (om det blir för mycket säg till på nästgående dailyscrum)
