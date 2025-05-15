@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 import { FaStar, FaRegStar } from "react-icons/fa";
 
 const GameCard = ({ game, isFavorite, toggleFavorite }) => {
+
   return (
     <div className="game-card">
       <img
@@ -14,6 +16,7 @@ const GameCard = ({ game, isFavorite, toggleFavorite }) => {
         {isFavorite ? <FaStar /> : <FaRegStar />}
       </span>
       <p>{game.genre}</p>
+      <Link url={game.game_url}>Play Now</Link>
     </div>
   );
 };
