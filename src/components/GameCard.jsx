@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { FaStar, FaRegStar } from "react-icons/fa";
 
 const GameCard = ({ game, isFavorite, toggleFavorite }) => {
@@ -16,7 +15,7 @@ const GameCard = ({ game, isFavorite, toggleFavorite }) => {
         {isFavorite ? <FaStar /> : <FaRegStar />}
       </span>
       <p>{game.genre}</p>
-      <Link url={game.game_url}>Play Now</Link>
+      <a className="play-button" href={game.game_url} target="_blank"> Play Now</a>
     </div>
   );
 };
