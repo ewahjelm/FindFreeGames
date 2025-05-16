@@ -1,7 +1,7 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import GameGrid from "../components/GameGrid";
+import { gamesData } from "../data/games";
 
 const Home = () => {
   const [selectedGenre, setSelectedGenre] = useState([]);
@@ -9,12 +9,22 @@ const Home = () => {
   const [favorites, setFavorites] = useState([]);
   const [showFavorites, setShowFavorites] = useState(false);
 
+  useEffect(() => {
+    const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    setFavorites(savedFavorites);
+  }, []);
+
+  //Här börjar favorit toogler
   const toggleFavorite = (gameId) => {
+    let updatedFavorites;
+
     if (favorites.includes(gameId)) {
-      setFavorites(favorites.filter((id) => id !== gameId));
+      updatedFavorites = favorites.filter((id) => id !== gameId);
     } else {
-      setFavorites([...favorites, gameId]);
+      updatedFavorites = [...favorites, gameId];
     }
+    setFavorites(updatedFavorites);
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
   };
 
   const thisGenre = [
@@ -35,6 +45,7 @@ const Home = () => {
   // If the user checks one of the checkboxes,
   // the handler adds the tag into selectedGenre/selectedPlatform.
   // Once it's unchecked, the handler removes the tag from selectedGenre/selectedPlatform
+  //Här börjar genre change
   const GenreChange = (e) => {
     const value = e.target.value;
     if (e.target.checked) {
@@ -43,7 +54,7 @@ const Home = () => {
       setSelectedGenre(selectedGenre.filter((g) => g !== value));
     }
   };
-
+  //Här börjar plattform change
   const PlatformChange = (e) => {
     const value = e.target.value;
     if (e.target.checked) {
