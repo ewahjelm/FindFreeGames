@@ -1,3 +1,11 @@
+/* 
+klasser som finns men inte stylats:
+play-button
+game-image
+ */
+
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -79,7 +87,7 @@
   max-width: calc(20% - 20px);
   height: auto;
 }
-
+/* finns className game-image i GameCard som inte används */
 .game-card img {
   width: 100%;
   height: auto;
@@ -106,7 +114,7 @@
   font-weight: bold;
 }
 
-.Footer {
+.footer {
   display: flex;
   flex-direction: column;
   background-color: lightgray;
@@ -116,6 +124,7 @@
   align-items: center;
 }
 
+/* .footer p { är mer konsekvent */
 .footer-p {
   margin-top: 50px;
 }
