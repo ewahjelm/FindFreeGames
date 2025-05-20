@@ -96,6 +96,50 @@
   color: #666;
 }
 
+.button-group {
+  display: flex;
+  background-color: #f1f1f1;
+  justify-content: center;
+  align-items: center;
+}
+.load-more-btn,
+.show-less-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #4d80a0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.play-button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #519cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.play-button:hover {
+  background-color: #519cff;
+  font-size: 1.1rem;
+}
+
+.load-more-btn:hover,
+.show-less-btn:hover {
+  background-color: #4d80a0;
+  font-size: 1.1rem;
+}
+
 .main-container {
   padding: 10px;
 }
