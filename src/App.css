@@ -59,6 +59,22 @@
   accent-color: #007bff;
 }
 
+.favorite-icon {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.favorite-icon:hover {
+  fill: gold; /* röd färg vid hover */
+  color: gold;
+}
+
+.favorite-icon.is-favorite {
+  fill: gold; /* röd fyllning för favorit */
+  color: gold; /* röd text för favorit */
+}
+
+
 .game-list {
   padding: 20px;
   flex: 1;

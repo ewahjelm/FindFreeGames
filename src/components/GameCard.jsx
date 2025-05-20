@@ -15,9 +15,12 @@ const GameCard = ({ game, isFavorite, toggleFavorite }) => {
         width="150"
       />
       <h3>{game.title}</h3>
-      <span onClick={() => toggleFavorite(game.id)}>
-        {isFavorite ? <FaStar /> : <FaRegStar />}
-      </span>
+      <span
+  onClick={() => toggleFavorite(game.id)}
+  className={`favorite-icon ${isFavorite ? "is-favorite" : ""}`}
+>
+  {isFavorite ? <FaStar /> : <FaRegStar />}
+</span>
       <p>{game.genre}</p>
       <button className="play-button" onClick={handlePlayNow}>Play Now</button>
     </div>
