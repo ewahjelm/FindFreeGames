@@ -67,6 +67,22 @@ game-image
   accent-color: #007bff;
 }
 
+.favorite-icon {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.favorite-icon:hover {
+  fill: gold; /* röd färg vid hover */
+  color: gold;
+}
+
+.favorite-icon.is-favorite {
+  fill: gold; /* röd fyllning för favorit */
+  color: gold; /* röd text för favorit */
+}
+
+
 .game-list {
   padding: 20px;
   flex: 1;
@@ -87,7 +103,10 @@ game-image
   max-width: calc(20% - 20px);
   height: auto;
 }
-/* finns className game-image i GameCard som inte används */
+.game-card:hover {
+  transform: scale(1.1);
+}
+
 .game-card img {
   width: 100%;
   height: auto;
