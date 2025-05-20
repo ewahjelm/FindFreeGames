@@ -3,12 +3,13 @@ import Footer from "../components/Footer";
 
 function About() {
   return (
-    <div>
-      <Header />
-      <div className="content">
-        <p className="content-header">About us</p>
-        <div className="content-body">
-          <img src="./public/girl.jpg" />
+      <div>
+          <Header />
+          <div className="content">
+              <p className="content-header">About</p>
+              <div className="content-body">
+                  <img src="./public/girl.jpg" />
+
 
           <div className="right">
             <p className="subtitle">

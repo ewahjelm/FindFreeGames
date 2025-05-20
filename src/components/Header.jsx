@@ -9,7 +9,7 @@ function Header() {
           <h1 className="header-content">FIND FREE GAMES TO PLAY</h1>
         </Link>
       </div>
-      <Link to="/about">About us</Link>
+      <Link to="/about">About</Link>
     </div>
   );
 }
