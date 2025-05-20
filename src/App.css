@@ -26,7 +26,7 @@ game-image
   margin-left: 30%;
 }
 .header-content {
-   font-family: Climate Crisis;
+  font-family: Climate Crisis;
   font-weight: 400;
   font-size: 38px;
   line-height: 100%;
@@ -35,7 +35,7 @@ game-image
   color: black;
 }
 .header-content:hover {
-   transform: scale(1.1);
+  transform: scale(1.1);
 }
 a {
   text-decoration: none;
@@ -44,11 +44,11 @@ a {
 }
 
 a:hover {
-   transform: scale(1.2);
+  transform: scale(1.2);
 }
 /* Left side styling */
 .content-header {
- font-family: Montserrat;
+  font-family: Montserrat;
   font-weight: 400;
   font-size: 48px;
   line-height: 100%;
@@ -123,7 +123,6 @@ a:hover {
   align-items: center;
   padding: 30px;
 }
-
 
 .main-layout {
   display: flex;
