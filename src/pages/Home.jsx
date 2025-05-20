@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import GameGrid from "../components/GameGrid";
 import { gamesData } from "../data/games";
+import Header from "../components/Header";
 
 const Home = () => {
   const [selectedGenre, setSelectedGenre] = useState([]);
@@ -66,10 +67,7 @@ const Home = () => {
 
   return (
     <div>
-      <header className="header">
-        <h2>Free to game</h2>
-      </header>
-
+      <Header />
       <div className="main-layout">
         <nav className="nav">
           <p>Filter by:</p>
