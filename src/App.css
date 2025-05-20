@@ -81,7 +81,6 @@ game-image
   letter-spacing: 0%;
   text-align: center;
 text-decoration: none;
-ju
 }
 /* Center side styling */
 /* .center -side {
@@ -93,6 +92,7 @@ ju
 } */
 /* Start page styling done */
 .header {
+  position: relative; /* Lägg till denna rad */
   background-color: #a6f8a6;
   height: 150px;
   width: 100%;
@@ -103,6 +103,7 @@ ju
   justify-content: space-between;
   align-items: center;
 }
+
 
 .main-layout {
   display: flex;
