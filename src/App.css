@@ -1,3 +1,11 @@
+/* 
+klasser som finns men inte stylats:
+play-button
+game-image
+ */
+
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -136,6 +144,22 @@ ju
   accent-color: #007bff;
 }
 
+.favorite-icon {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.favorite-icon:hover {
+  fill: gold; /* röd färg vid hover */
+  color: gold;
+}
+
+.favorite-icon.is-favorite {
+  fill: gold; /* röd fyllning för favorit */
+  color: gold; /* röd text för favorit */
+}
+
+
 .game-list {
   padding: 20px;
   flex: 1;
@@ -156,6 +180,9 @@ ju
   max-width: calc(20% - 20px);
   height: auto;
 }
+.game-card:hover {
+  transform: scale(1.1);
+}
 
 .game-card img {
   width: 100%;
@@ -173,6 +200,50 @@ ju
   color: #666;
 }
 
+.button-group {
+  display: flex;
+  background-color: #f1f1f1;
+  justify-content: center;
+  align-items: center;
+}
+.load-more-btn,
+.show-less-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #4d80a0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.play-button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #519cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.play-button:hover {
+  background-color: #519cff;
+  font-size: 1.1rem;
+}
+
+.load-more-btn:hover,
+.show-less-btn:hover {
+  background-color: #4d80a0;
+  font-size: 1.1rem;
+}
+
 .main-container {
   padding: 10px;
 }
@@ -183,7 +254,7 @@ ju
   font-weight: bold;
 }
 
-.Footer {
+.footer {
   display: flex;
   flex-direction: column;
   background-color: lightgray;
@@ -193,6 +264,7 @@ ju
   align-items: center;
 }
 
+/* .footer p { är mer konsekvent */
 .footer-p {
   margin-top: 50px;
 }
