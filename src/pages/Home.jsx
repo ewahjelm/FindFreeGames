@@ -67,7 +67,7 @@ const Home = () => {
   return (
     <div>
       <header className="header">
-        <h2>Free to game</h2>
+        <h2>Find free games to play</h2>
       </header>
 
       <div className="main-layout">
