@@ -1,6 +1,6 @@
 import { FaStar, FaRegStar } from "react-icons/fa";
 
-const GameCard = ({ game, isFavorite, toggleFavorite }) => {
+const GameCard = ({ game, isFavorite, toggleFavorite, onClick }) => {
   const handlePlayNow = () => {
     window.open(game.game_url, "_blank");
   };
@@ -18,13 +18,19 @@ const GameCard = ({ game, isFavorite, toggleFavorite }) => {
       </h3>
       <span
         onClick={() => toggleFavorite(game.id)}
+
         className={`favorite-icon ${isFavorite ? "is-favorite" : ""}`}
       >
         {isFavorite ? <FaStar /> : <FaRegStar />}
       </span>
       <p>{game.genre}</p>
-
-      <button className="play-button" onClick={handlePlayNow}>
+      <button
+        className="play-button"
+        onClick={(e) => {
+          e.stopPropagation();
+          handlePlayNow();
+        }}
+      >
         Play Now
       </button>
     </div>

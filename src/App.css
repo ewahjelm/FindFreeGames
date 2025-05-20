@@ -4,8 +4,6 @@ play-button
 game-image
  */
 
-
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,8 +17,7 @@ game-image
   flex-direction: column;
   justify-content: center;
   justify-items: center;
-  margin-top: 40px;
-  margin-left: 150px;
+  margin-top: 20px;
 }
 .header-start {
   max-width: 396px;
@@ -28,9 +25,30 @@ game-image
 
   margin-left: 30%;
 }
+.header-content {
+   font-family: Climate Crisis;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 100%;
+  letter-spacing: 10%;
+  text-align: center;
+  color: black;
+}
+.header-content:hover {
+   transform: scale(1.1);
+}
+a {
+  text-decoration: none;
+  font-family: Montserrat;
+  color: black;
+}
+
+a:hover {
+   transform: scale(1.2);
+}
 /* Left side styling */
 .content-header {
-  font-family: Climate Crisis;
+ font-family: Montserrat;
   font-weight: 400;
   font-size: 48px;
   line-height: 100%;
@@ -77,11 +95,10 @@ game-image
   font-weight: 500;
   font-style: italic;
   font-size: 24px;
-  line-height: 100%;
+  line-height: 74px;
   letter-spacing: 0%;
   text-align: center;
-text-decoration: none;
-ju
+  text-decoration: none;
 }
 /* Center side styling */
 /* .center -side {
@@ -92,7 +109,9 @@ ju
   grid-area: 1 / 3 / 2 / 4;
 } */
 /* Start page styling done */
+
 .header {
+  position: relative; /* Lägg till denna rad */
   background-color: #a6f8a6;
   height: 150px;
   width: 100%;
@@ -102,7 +121,9 @@ ju
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 30px;
 }
+
 
 .main-layout {
   display: flex;
@@ -159,7 +180,6 @@ ju
   color: gold; /* röd text för favorit */
 }
 
-
 .game-list {
   padding: 20px;
   flex: 1;
@@ -188,16 +208,57 @@ ju
   width: 100%;
   height: auto;
   object-fit: contain;
+  cursor: pointer;
 }
 
 .game-card h3 {
   margin-top: 10px;
   font-size: 18px;
+  cursor: pointer;
 }
 
 .game-card p {
   font-size: 14px;
   color: #666;
+}
+
+.game-page.blurred {
+  user-select: none;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-card {
+  align-items: center;
+  justify-content: center;
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  z-index: 1001;
+}
+
+.close-btn {
+  position: absolute;
+  border: none;
+  top: 10px;
+  right: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1002;
 }
 
 .button-group {

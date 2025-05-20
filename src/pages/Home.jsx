@@ -4,7 +4,7 @@ import GameGrid from "../components/GameGrid";
 import { gamesData } from "../data/games";
 import Header from "../components/Header";
 
-const Home = () => {
+const Home = ({ selectedGame, setSelectedGame }) => {
   const [selectedGenre, setSelectedGenre] = useState([]);
   const [selectedPlatform, setSelectedPlatform] = useState([]);
   const [favorites, setFavorites] = useState([]);
@@ -126,6 +126,8 @@ const Home = () => {
           favorites={favorites}
           toggleFavorite={toggleFavorite}
           showFavorites={showFavorites}
+          selectedGame={selectedGame}
+          setSelectedGame={setSelectedGame}
         />
       </div>
       <Footer />
