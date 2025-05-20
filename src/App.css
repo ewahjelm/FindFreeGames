@@ -1,4 +1,4 @@
-/* 
+/*
 klasser som finns men inte stylats:
 play-button
 game-image
@@ -174,13 +174,19 @@ game-image
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   flex: 1 1 calc(20% - 20px); /* 5 kort per rad */
   max-width: calc(20% - 20px);
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+
 }
 .game-card:hover {
   transform: scale(1.1);
+
 }
 
 .game-card img {
+     margin-top: 20px;
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -219,7 +225,7 @@ game-image
 }
 
 .play-button {
-  margin: 10px;
+
   padding: 10px 20px;
   font-size: 1rem;
   cursor: pointer;
@@ -228,6 +234,7 @@ game-image
   border: none;
   border-radius: 8px;
   transition: all 0.3s ease;
+
 }
 .play-button:hover {
   background-color: #519cff;

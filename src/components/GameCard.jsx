@@ -7,12 +7,14 @@ const GameCard = ({ game, isFavorite, toggleFavorite }) => {
 
   return (
     <div className="game-card">
+
       <img
         src={game.thumbnail}
         alt={game.title}
         className="game-image"  //används inte !!
         width="150"             // inline css !!
       />
+      <div className="card-info">
       <h3>{game.title}</h3>
       <span
   onClick={() => toggleFavorite(game.id)}
@@ -21,7 +23,7 @@ const GameCard = ({ game, isFavorite, toggleFavorite }) => {
   {isFavorite ? <FaStar /> : <FaRegStar />}
 </span>
       <p>{game.genre}</p>
-
+</div>
       <button className="play-button" onClick={handlePlayNow}>
         Play Now
       </button>
