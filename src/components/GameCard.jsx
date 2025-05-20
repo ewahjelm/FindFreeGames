@@ -11,8 +11,8 @@ const GameCard = ({ game, isFavorite, toggleFavorite }) => {
       <img
         src={game.thumbnail}
         alt={game.title}
-        className="game-image"
-        width="150"
+        className="game-image"  //används inte !!
+        width="150"             // inline css !!
       />
       <h3>{game.title}</h3>
       <span
