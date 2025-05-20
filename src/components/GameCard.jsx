@@ -6,7 +6,7 @@ const GameCard = ({ game, isFavorite, toggleFavorite, onClick }) => {
   };
 
   return (
-    <div className="game-card">
+    <div className="game-card" onClick={onClick}>
       <img
         src={game.thumbnail}
         alt={game.title}
@@ -18,7 +18,6 @@ const GameCard = ({ game, isFavorite, toggleFavorite, onClick }) => {
       </h3>
       <span
         onClick={() => toggleFavorite(game.id)}
-
         className={`favorite-icon ${isFavorite ? "is-favorite" : ""}`}
       >
         {isFavorite ? <FaStar /> : <FaRegStar />}
