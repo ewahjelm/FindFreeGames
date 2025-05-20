@@ -10,16 +10,18 @@ const GameCard = ({ game, isFavorite, toggleFavorite }) => {
       <img
         src={game.thumbnail}
         alt={game.title}
-        className="game-image"  //används inte !!
-        width="150"             // inline css !!
+        className="game-image" //används inte !!
+        width="150" // inline css !!
       />
-      <h3>{game.title}</h3>
+      <h3 titel={game.title}>
+        {game.title.length > 10 ? game.title.slice(0, 10) + "..." : game.title}
+      </h3>
       <span
-  onClick={() => toggleFavorite(game.id)}
-  className={`favorite-icon ${isFavorite ? "is-favorite" : ""}`}
->
-  {isFavorite ? <FaStar /> : <FaRegStar />}
-</span>
+        onClick={() => toggleFavorite(game.id)}
+        className={`favorite-icon ${isFavorite ? "is-favorite" : ""}`}
+      >
+        {isFavorite ? <FaStar /> : <FaRegStar />}
+      </span>
       <p>{game.genre}</p>
 
       <button className="play-button" onClick={handlePlayNow}>
