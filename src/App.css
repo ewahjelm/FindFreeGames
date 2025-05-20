@@ -96,6 +96,10 @@
   height: auto;
 }
 
+.game-card:hover {
+  transform: scale(1.1); /* Gör elementet 10% större */
+}
+
 .game-card img {
   width: 100%;
   height: auto;
