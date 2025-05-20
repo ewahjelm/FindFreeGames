@@ -28,17 +28,17 @@ const Home = () => {
   };
 
   const thisGenre = [
-    "mmorpg",
+    "Mmorpg",
     "Shooter",
-    "strategy",
-    "moba",
-    "racing",
-    "sports",
-    "social",
-    "mmo",
-    "fantasy",
-    "fighting",
-    "action",
+    "Strategy",
+    "Moba",
+    "Racing",
+    "Sports",
+    "Social",
+    "Mmo",
+    "Fantasy",
+    "Fighting",
+    "Action",
   ];
   const thisPlatform = ["Browser", "PC"];
 

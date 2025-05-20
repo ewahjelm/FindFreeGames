@@ -5,6 +5,32 @@
   font-family: Arial, sans-serif;
 }
 
+/*Start page styling */
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+/* Left side styling */
+.left-side {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.left-side img {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+}
+/* Center side styling */
+.center -side {
+  grid-area: 1 / 2 / 2 / 3;
+}
+/* Right side styling */
+.right-side {
+  grid-area: 1 / 3 / 2 / 4;
+}
+/* Start page styling done */
 .header {
   background-color: #4d80a0;
   height: 150px;
