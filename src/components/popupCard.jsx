@@ -1,5 +1,3 @@
-import React from "react";
-
 const PopupCard = ({ game, onClose }) => {
   return (
     <div className="popup-overlay">

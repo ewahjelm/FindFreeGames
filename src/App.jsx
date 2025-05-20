@@ -1,10 +1,9 @@
 import { useState } from "react"; // Lägg till denna
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Lägg till denna
 import Start from "./pages/Start";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
+import "./App.css";
 
 const App = () => {
   const [selectedGame, setSelectedGame] = useState(null); // ⬅️ Flytta hit
