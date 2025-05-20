@@ -5,7 +5,7 @@ function About() {
       <div>
           <Header />
           <div className="content">
-              <p className="content-header">About us</p>
+              <p className="content-header">About</p>
               <div className="content-body">
                   <img src="./public/girl.jpg" />
 

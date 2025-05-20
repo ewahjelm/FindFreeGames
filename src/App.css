@@ -19,8 +19,7 @@ game-image
   flex-direction: column;
   justify-content: center;
   justify-items: center;
-  margin-top: 40px;
-  margin-left: 150px;
+  margin-top: 20px;
 }
 .header-start {
   max-width: 396px;
@@ -28,9 +27,30 @@ game-image
 
   margin-left: 30%;
 }
+.header-content {
+   font-family: Climate Crisis;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 100%;
+  letter-spacing: 10%;
+  text-align: center;
+  color: black;
+}
+.header-content:hover {
+   transform: scale(1.1);
+}
+a {
+  text-decoration: none;
+  font-family: Montserrat;
+  color: black;
+}
+
+a:hover {
+   transform: scale(1.2);
+}
 /* Left side styling */
 .content-header {
-  font-family: Climate Crisis;
+ font-family: Montserrat;
   font-weight: 400;
   font-size: 48px;
   line-height: 100%;
@@ -102,6 +122,7 @@ text-decoration: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 30px;
 }
 
 
