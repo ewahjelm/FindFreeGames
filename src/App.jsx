@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // L�
 import Start from "./pages/Start";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import "./App.css"; // Lägg till denna
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 
 const App = () => {
   const [selectedGame, setSelectedGame] = useState(null); // ⬅️ Flytta hit

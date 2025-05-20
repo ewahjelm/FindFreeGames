@@ -6,14 +6,19 @@ const GameCard = ({ game, isFavorite, toggleFavorite, onClick }) => {
   };
 
   return (
-    <div className="game-card" onClick={onClick}>
-      <img src={game.thumbnail} alt={game.title} width="150" />
-      <h3>{game.title}</h3>
+    <div className="game-card">
+      <img
+        src={game.thumbnail}
+        alt={game.title}
+        className="game-image" //används inte !!
+        width="150" // inline css !!
+      />
+      <h3 titel={game.title}>
+        {game.title.length > 10 ? game.title.slice(0, 10) + "..." : game.title}
+      </h3>
       <span
-        onClick={(e) => {
-          e.stopPropagation(); // förhindrar att kortet klickas
-          toggleFavorite(game.id);
-        }}
+        onClick={() => toggleFavorite(game.id)}
+
         className={`favorite-icon ${isFavorite ? "is-favorite" : ""}`}
       >
         {isFavorite ? <FaStar /> : <FaRegStar />}
