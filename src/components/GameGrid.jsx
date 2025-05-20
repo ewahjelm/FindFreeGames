@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { gamesData } from "../data/games"; // Importing the mock data
+import { gamesData } from "../data/games";
 import GameCard from "../components/GameCard";
+import PopupCard from "./popupCard";
 
 const GameGrid = ({
   selectedGenre,
@@ -8,16 +9,18 @@ const GameGrid = ({
   favorites,
   toggleFavorite,
   showFavorites,
+  selectedGame,
+  setSelectedGame,
 }) => {
   const [games, setGames] = useState([]);
   const [visibleCount, setVisbleCount] = useState(10);
+
   const itemsPerPage = 10;
 
   useEffect(() => {
-    setGames(gamesData); // Mock fetching games
+    setGames(gamesData);
   }, []);
 
-  //Filter games by genre and platform
   const filteredGames = games.filter((game) => {
     const genre = game.genre.toLowerCase();
     const platform = game.platform.toLowerCase();
@@ -38,11 +41,10 @@ const GameGrid = ({
 
   const handleShowLess = () => {
     setVisbleCount((prev) => Math.max(10, prev - itemsPerPage));
-    // window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <div className="game-page">
+    <div className={`game-page ${selectedGame ? "blurred" : ""}`}>
       <div className="game-list">
         {filteredGames.slice(0, visibleCount).map((game) => (
           <GameCard
@@ -50,9 +52,11 @@ const GameGrid = ({
             game={game}
             isFavorite={favorites.includes(game.id)}
             toggleFavorite={toggleFavorite}
+            onClick={() => setSelectedGame(game)} // öppna popup
           />
         ))}
       </div>
+
       <div className="button-group">
         {visibleCount < filteredGames.length && (
           <button onClick={handleLoadMore} className="load-more-btn">
@@ -65,6 +69,13 @@ const GameGrid = ({
           </button>
         )}
       </div>
+
+      {selectedGame && (
+        <PopupCard
+          game={selectedGame}
+          onClose={() => setSelectedGame(null)} // stäng popup
+        />
+      )}
     </div>
   );
 };

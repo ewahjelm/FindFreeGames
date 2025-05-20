@@ -1,20 +1,21 @@
 import React from "react";
 
-function popupCard() {
+const PopupCard = ({ game, onClose }) => {
   return (
-    <div className="popup-card">
-      <header>
-        <div>Favorited</div>
-        <h1>Title</h1>
-        <button>X</button>
-      </header>
-      <main>
-        <img />
-        <p>Short description</p>
-        <button>Play</button>
-      </main>
+    <div className="popup-overlay">
+      <div className="popup-card">
+        <button className="close-btn" onClick={onClose}>
+          X
+        </button>
+        <h2>{game.title}</h2>
+        <img src={game.thumbnail} alt={game.title} />
+        <p>{game.short_description}</p>
+        <button onClick={() => window.open(game.game_url, "_blank")}>
+          Play Now
+        </button>
+      </div>
     </div>
   );
-}
+};
 
-export default popupCard;
+export default PopupCard;
