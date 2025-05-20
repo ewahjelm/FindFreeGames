@@ -7,29 +7,96 @@
 
 /*Start page styling */
 .content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+ justify-items: center;
+ margin-top:40px;
+  margin-left:150px;
+
+
+}
+.header-start{
+    max-width: 396px;
+    max-height: 198px;
+
+margin-left:30%;
+
+
+
 }
 /* Left side styling */
-.left-side {
-  grid-area: 1 / 1 / 2 / 2;
+.content-header{
+font-family: Climate Crisis;
+font-weight: 400;
+font-size: 48px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
+
+
+
+
+
 }
-.left-side img {
+.content-body {
+   display: flex;
+  flex-direction: row;
+ justify-content: center;
+ justify-items: center;
+
+}
+.subtitle{
+    font-family: Montserrat;
+font-weight: 500;
+font-style: italic;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+.content-body img {
   width: 500px;
   max-width: 100%;
   height: auto;
 }
+.right{
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+ justify-items: center;
+}
+.start-btn{
+
+background-color:  #519CFF;
+width: 281px;
+height: 74px;
+border-style: none;
+border-radius: 25px;
+border-width: 1px;
+ margin-top: 20px;
+ margin-left: 150px;
+color:white;
+ font-family: Montserrat;
+font-weight: 500;
+font-style: italic;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
+
+}
 /* Center side styling */
-.center -side {
+/* .center -side {
   grid-area: 1 / 2 / 2 / 3;
-}
+} */
 /* Right side styling */
-.right-side {
+/* .right-side {
   grid-area: 1 / 3 / 2 / 4;
-}
+} */
 /* Start page styling done */
 .header {
   background-color: #4d80a0;
