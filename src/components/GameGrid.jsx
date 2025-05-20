@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { gamesData } from "../data/games"; // Importing the mock data
 import GameCard from "../components/GameCard";
+import DropDown from "./dropdown";
 
 const GameGrid = ({
   selectedGenre,
@@ -43,6 +44,7 @@ const GameGrid = ({
 
   return (
     <div className="game-page">
+      <DropDown />
       <div className="game-list">
         {filteredGames.slice(0, visibleCount).map((game) => (
           <GameCard

@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import GameGrid from "../components/GameGrid";
 import { gamesData } from "../data/games";
 import Header from "../components/Header";
+import DropDown from "../components/dropdown";
 
 const Home = () => {
   const [selectedGenre, setSelectedGenre] = useState([]);
@@ -69,57 +70,6 @@ const Home = () => {
     <div>
       <Header />
       <div className="main-layout">
-        <nav className="nav">
-          <p>Filter by:</p>
-          <br />
-          <ul>
-            <li>
-              <label>
-                <input
-                  type="checkbox"
-                  onChange={(e) => setShowFavorites(e.target.checked)}
-                />
-                Favorites
-              </label>
-            </li>
-            <br />
-          </ul>
-          <p>Platform</p>
-          <br />
-          <ul>
-            {thisPlatform.map((platform) => (
-              <li key={platform}>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="platform-filter"
-                    value={platform.toLowerCase()}
-                    onChange={PlatformChange}
-                  />
-                  {platform}
-                </label>
-              </li>
-            ))}
-          </ul>
-          <br />
-          <p>Genre</p>
-          <br />
-          <ul>
-            {thisGenre.map((genre) => (
-              <li key={genre}>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="genre-filter"
-                    value={genre.toLowerCase()}
-                    onChange={GenreChange}
-                  />
-                  {genre}
-                </label>
-              </li>
-            ))}
-          </ul>
-        </nav>
         <GameGrid
           selectedGenre={selectedGenre}
           selectedPlatform={selectedPlatform}
