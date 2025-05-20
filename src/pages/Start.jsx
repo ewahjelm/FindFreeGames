@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Start() {
   return (
@@ -15,7 +16,7 @@ function Start() {
                       We track the best free PC and browser games <br /> so you
                       don’t have to
                   </p>
-                  <button className="start-btn">Browse</button>
+                  <Link to="/home" className="start-btn">Browse</Link>
               </div>
           </div>
 
