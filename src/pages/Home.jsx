@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import GameGrid from "../components/GameGrid";
 import { gamesData } from "../data/games";
+import Header from "../components/Header";
 
 const Home = () => {
   const [selectedGenre, setSelectedGenre] = useState([]);
@@ -28,17 +29,17 @@ const Home = () => {
   };
 
   const thisGenre = [
-    "mmorpg",
+    "Mmorpg",
     "Shooter",
-    "strategy",
-    "moba",
-    "racing",
-    "sports",
-    "social",
-    "mmo",
-    "fantasy",
-    "fighting",
-    "action",
+    "Strategy",
+    "Moba",
+    "Racing",
+    "Sports",
+    "Social",
+    "Mmo",
+    "Fantasy",
+    "Fighting",
+    "Action",
   ];
   const thisPlatform = ["Browser", "PC"];
 
@@ -66,10 +67,7 @@ const Home = () => {
 
   return (
     <div>
-      <header className="header">
-        <h2>Find free games to play</h2>
-      </header>
-
+      <Header />
       <div className="main-layout">
         <nav className="nav">
           <p>Filter by:</p>
