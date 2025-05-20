@@ -5,7 +5,9 @@ function Header() {
   return (
     <div className="header">
       <div className="header-start">
-        <h1 className="header-content">FIND FREE GAMES TO PLAY</h1>
+        <Link to="/home">
+          <h1 className="header-content">FIND FREE GAMES TO PLAY</h1>
+        </Link>
       </div>
       <Link to="/about">About us</Link>
     </div>
