@@ -17,10 +17,8 @@ const GameCard = ({ game, isFavorite, toggleFavorite, onClick }) => {
         {game.title.length > 10 ? game.title.slice(0, 10) + "..." : game.title}
       </h3>
       <span
-        onClick={(e) => {
-          e.stopPropagation(); // förhindrar att kortet klickas
-          toggleFavorite(game.id);
-        }}
+
+        onClick={() => toggleFavorite(game.id)}
         className={`favorite-icon ${isFavorite ? "is-favorite" : ""}`}
       >
         {isFavorite ? <FaStar /> : <FaRegStar />}
