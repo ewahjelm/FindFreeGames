@@ -20,11 +20,12 @@ game-image
   margin-top: 20px;
 }
 .header-start {
-  max-width: 396px;
-  max-height: 198px;
-  margin-left: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
 }
-
 .content-header-start {
   font-family: Climate Crisis;
   font-weight: 400;
@@ -43,17 +44,17 @@ game-image
   text-align: center;
   color: black;
 }
-.header-content:hover {
+/* .header-content:hover {
   transform: scale(1.1);
-}
+} */
 a {
   text-decoration: none;
   font-family: Montserrat;
   color: black;
 }
-a:hover {
+/* a:hover {
   transform: scale(1.2);
-}
+} */
 
 /* Left side styling */
 .content-header {
@@ -83,7 +84,10 @@ a:hover {
 .right {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  text-align: center;
+  gap: 16px;
 }
 .start-btn {
   background-color: #519cff;
@@ -92,18 +96,21 @@ a:hover {
   border-style: none;
   border-radius: 25px;
   margin-top: 20px;
-  margin-left: 150px;
   color: white;
   font-family: Montserrat;
   font-weight: 500;
   font-style: italic;
   font-size: 24px;
 
-
   line-height: 74px;
   letter-spacing: 0%;
 
   text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   padding-top: 20px;
   height: 74px;
   line-height: normal;
@@ -362,11 +369,60 @@ a:hover {
     max-width: calc(33.33% - 20px);
   }
 }
+@media (hover: hover) {
+  .header-content:hover {
+    transform: scale(1.1);
+  }
+
+  a:hover {
+    transform: scale(1.2);
+  }
+
+  .start-btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+  }
+}
 
 /* Mobile: 2 cards per row and hide sidebar */
 @media (max-width: 768px) {
   .main-layout {
     flex-direction: column;
+  }
+  .header-start {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px 0;
+  }
+  .content-header {
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+  }
+  .header-content {
+    font-size: 24px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+  .content-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-body img {
+    width: 100%;
+    height: auto;
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
   }
 
   .nav {
@@ -425,11 +481,12 @@ a:hover {
     font-size: 10px;
   }
 }
-.filters{
-    margin: 40px;
-    ;display: flex;
-flex-direction: row;
-justify-content: space-between; }
+.filters {
+  margin: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .dropdown {
   position: relative;
   display: inline-block;
