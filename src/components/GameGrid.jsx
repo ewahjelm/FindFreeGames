@@ -58,14 +58,14 @@ const GameGrid = ({
       </div>
 
       <div className="button-group">
-        {visibleCount < filteredGames.length && (
-          <button onClick={handleLoadMore} className="load-more-btn">
-            Show more
-          </button>
-        )}
         {visibleCount > 10 && (
           <button onClick={handleShowLess} className="show-less-btn">
             Show less
+          </button>
+        )}
+        {visibleCount < filteredGames.length && (
+          <button onClick={handleLoadMore} className="load-more-btn">
+            Show more
           </button>
         )}
       </div>
