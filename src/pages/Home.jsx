@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import GameGrid from "../components/GameGrid";
 import Header from "../components/Header";
+import DropdownGenre from "../components/DropdownGenre";
+import DropdownPlatform from "../components/DropdownPlatform";
+import FavoriteToggle from "../components/FavoriteToggle";
 
 const Home = ({ selectedGame, setSelectedGame }) => {
   const [selectedGenre, setSelectedGenre] = useState([]);
@@ -28,19 +31,20 @@ const Home = ({ selectedGame, setSelectedGame }) => {
   };
 
   const thisGenre = [
-    "Mmorpg",
-    "Shooter",
-    "Strategy",
-    "Moba",
-    "Racing",
-    "Sports",
-    "Social",
-    "Mmo",
-    "Fantasy",
-    "Fighting",
-    "Action",
+    "mmorpg",
+    "shooter",
+    "strategy",
+    "moba",
+    "racing",
+    "sports",
+    "social",
+    "mmo",
+    "fantasy",
+    "fighting",
+    "action",
   ];
-  const thisPlatform = ["Browser", "PC"];
+
+  const thisPlatform = ["browser", "pc"];
 
   // If the user checks one of the checkboxes,
   // the handler adds the tag into selectedGenre/selectedPlatform.
@@ -66,59 +70,35 @@ const Home = ({ selectedGame, setSelectedGame }) => {
 
   return (
     <div>
-      <Header />
+      <Header
+        thisGenre={thisGenre}
+        thisPlatform={thisPlatform}
+        selectedGenre={selectedGenre}
+        selectedPlatform={selectedPlatform}
+        GenreChange={GenreChange}
+        PlatformChange={PlatformChange}
+        showFavorites={showFavorites}
+        setShowFavorites={setShowFavorites}
+      />
       <div className="main-layout">
-        <nav className="nav">
-          <p>Filter by:</p>
-          <br />
-          <ul>
-            <li>
-              <label>
-                <input
-                  type="checkbox"
-                  onChange={(e) => setShowFavorites(e.target.checked)}
-                />
-                Favorites
-              </label>
-            </li>
-            <br />
-          </ul>
-          <p>Platform</p>
-          <br />
-          <ul>
-            {thisPlatform.map((platform) => (
-              <li key={platform}>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="platform-filter"
-                    value={platform.toLowerCase()}
-                    onChange={PlatformChange}
-                  />
-                  {platform}
-                </label>
-              </li>
-            ))}
-          </ul>
-          <br />
-          <p>Genre</p>
-          <br />
-          <ul>
-            {thisGenre.map((genre) => (
-              <li key={genre}>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="genre-filter"
-                    value={genre.toLowerCase()}
-                    onChange={GenreChange}
-                  />
-                  {genre}
-                </label>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className="filters filters-desktop">
+          <DropdownGenre
+            options={thisGenre}
+            selected={selectedGenre}
+            onChange={GenreChange}
+          />
+          <DropdownPlatform
+            options={thisPlatform}
+            selected={selectedPlatform}
+            onChange={PlatformChange}
+          />
+
+          <FavoriteToggle
+            showFavorites={showFavorites}
+            setShowFavorites={setShowFavorites}
+            favorites={favorites}
+          />
+        </div>
         <GameGrid
           selectedGenre={selectedGenre}
           selectedPlatform={selectedPlatform}

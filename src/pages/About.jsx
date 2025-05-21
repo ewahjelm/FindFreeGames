@@ -10,7 +10,6 @@ function About() {
         <div className="content-body">
           <img src="./public/girl.jpg" />
 
-
           <div className="right">
             <p className="subtitle">
               Have you ever grown tired of a game you used to love? Then felt

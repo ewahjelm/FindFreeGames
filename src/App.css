@@ -1,4 +1,4 @@
-/* 
+/*
 klasser som finns men inte stylats:
 play-button
 game-image
@@ -20,19 +20,11 @@ game-image
   margin-top: 20px;
 }
 .header-start {
-  max-width: 396px;
-  max-height: 198px;
-  margin-left: 30%;
-}
-
-.content-header-start {
-  font-family: Climate Crisis;
-  font-weight: 400;
-  font-size: 38px;
-  line-height: 100%;
-  letter-spacing: 10%;
-  text-align: center;
-  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
 }
 .header-content {
   font-family: Climate Crisis;
@@ -43,16 +35,11 @@ game-image
   text-align: center;
   color: black;
 }
-.header-content:hover {
-  transform: scale(1.1);
-}
+
 a {
   text-decoration: none;
   font-family: Montserrat;
   color: black;
-}
-a:hover {
-  transform: scale(1.2);
 }
 
 /* Left side styling */
@@ -72,7 +59,7 @@ a:hover {
   font-family: Montserrat;
   font-weight: 500;
   font-style: italic;
-  font-size: 24px;
+  font-size: 16px;
   text-align: center;
 }
 .content-body img {
@@ -83,7 +70,11 @@ a:hover {
 .right {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  text-align: center;
+  gap: 16px;
+  width: 500px;
 }
 .start-btn {
   background-color: #519cff;
@@ -92,18 +83,13 @@ a:hover {
   border-style: none;
   border-radius: 25px;
   margin-top: 20px;
-  margin-left: 150px;
   color: white;
   font-family: Montserrat;
   font-weight: 500;
   font-style: italic;
   font-size: 24px;
-
-
-  line-height: 74px;
-  letter-spacing: 0%;
-
   text-align: center;
+  padding-top: 20px;
 }
 
 /* Layout and navigation */
@@ -123,7 +109,7 @@ a:hover {
 
 .main-layout {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
 }
 .nav {
@@ -198,12 +184,10 @@ a:hover {
 .game-page.blurred {
   user-select: none;
 }
-
 .game-page.blurred .game-list {
   filter: blur(5px);
-  pointer-events: none; /* förhindrar klick på bakgrunden */
+  pointer-events: none;
 }
-
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -219,28 +203,24 @@ a:hover {
 .popup-card {
   align-items: center;
   justify-content: center;
-  background: lightgray;
   background: #9c9c9c;
   padding: 20px;
   border-radius: 12px;
   max-width: 400px;
-  height: 390px;
+  height: 400px;
   width: 90%;
   position: relative;
   z-index: 1001;
 }
-
 .popup-card h2 {
   margin-bottom: 10px;
   margin-left: 120px;
 }
-
 .popup-card p {
   margin-top: 10px;
 }
-
 .play-button-popup {
-  margin: 20px 120px;
+  margin: 10px 120px;
   padding: 10px 20px;
   font-size: 1rem;
   cursor: pointer;
@@ -250,14 +230,12 @@ a:hover {
   border-radius: 8px;
   transition: all 0.3s ease;
 }
-
 .play-button-popup:hover {
   font-size: 1.1rem;
 }
-
 .close-btn {
   position: absolute;
-  background-color: lightgrey;
+  background: none;
   border: none;
   top: 10px;
   right: 15px;
@@ -348,6 +326,71 @@ a:hover {
   margin: 0 10px;
 }
 
+/* Filter layout */
+.filters {
+  margin: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.filters-desktop {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.mobile-filters {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+/* Dropdown styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  font-family: Arial, sans-serif;
+}
+.dropdown-toggle {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 4px;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  border-radius: 0 0 4px 4px;
+}
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+.dropdown-item input {
+  margin-right: 8px;
+}
+
 /* --------------------
    RESPONSIVE DESIGN
 --------------------- */
@@ -360,10 +403,65 @@ a:hover {
   }
 }
 
-/* Mobile: 2 cards per row and hide sidebar */
+/* Hover effects for desktop */
+@media (hover: hover) {
+  .header-content:hover {
+    transform: scale(1.1);
+  }
+
+  a:hover {
+    transform: scale(1.2);
+  }
+
+  .start-btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+  }
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
   .main-layout {
     flex-direction: column;
+  }
+
+  .start-btn {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+    padding-top: 14px;
+    margin-bottom: 40px;
+  }
+
+  .header-start {
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
+  }
+
+  .content-header,
+  .header-content {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .content-body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-body img {
+    width: 100%;
+  }
+
+  .right {
+    align-items: center;
+    width: 300px;
+    margin-bottom: 20px;
   }
 
   .nav {
@@ -372,15 +470,6 @@ a:hover {
 
   .hamburger {
     display: block;
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin: 0 10px;
-  }
-
-  .about-link {
-    margin-right: 10px;
   }
 
   .mobile-menu {
@@ -399,9 +488,17 @@ a:hover {
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
   }
+
+  .filters-desktop {
+    display: none;
+  }
+
+  .mobile-filters {
+    display: flex;
+  }
 }
 
-/* Small mobile: 1 card per row */
+/* Small mobile */
 @media (max-width: 480px) {
   .hamburger {
     display: none;
