@@ -17,8 +17,8 @@ function Start() {
           <img src="/public/bg.jpg" alt="gamer-illustration" />
 
           <div className="right">
-            <p className="p-text">
-              We track the best free PC and browser games <br /> so you
+            <p className="p-text p-start">
+              We track the best free PC and browser games so you
               don’t have to
             </p>
             <Link to="/home" className="start-btn">Great! Let's go!</Link>

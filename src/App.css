@@ -19,6 +19,7 @@ game-image
   justify-items: center;
   margin-top: 20px;
 }
+
 .header-start {
   display: flex;
   justify-content: center;
@@ -26,6 +27,7 @@ game-image
   width: 100%;
   padding: 20px 0;
 }
+
 .header-content {
   font-family: Climate Crisis;
   font-weight: 400;
@@ -56,6 +58,7 @@ a {
   flex-direction: row;
   justify-content: center;
 }
+
 .standard-h3 {
   font-family: Montserrat;
   font-weight: 500;
@@ -72,6 +75,7 @@ a {
   line-height: 1.5;
   /* text-align: center; */
 }
+
 .content-body img {
   /* width: 500px; */
   width: 100%;
@@ -79,6 +83,7 @@ a {
   height: auto;
   object-fit: contain;
 }
+
 .right {
   display: flex;
   flex-direction: column;
@@ -90,6 +95,12 @@ a {
   width: 500px;
   padding: 20px;
 }
+
+.p-start {
+  width: 100%;
+  text-align: center;
+}
+
 .start-btn {
   background-color: #519cff;
   width: 281px;
@@ -126,6 +137,7 @@ a {
   flex-direction: column;
   flex-wrap: nowrap;
 }
+
 .nav {
   width: 12%;
   min-width: 180px;
@@ -135,19 +147,23 @@ a {
   border-right: 1px solid #ccc;
   overflow-y: auto;
 }
+
 .nav ul {
   list-style-type: none;
   padding: 0;
 }
+
 .nav li {
   margin-bottom: 10px;
 }
+
 .nav label {
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 8px;
 }
+
 .nav input[type="checkbox"] {
   accent-color: #007bff;
 }
@@ -156,6 +172,7 @@ a {
 .section-grid {
   align-items: end;
 }
+
 .game-list {
   padding: 20px;
   flex: 1;
@@ -164,6 +181,7 @@ a {
   gap: 20px;
   background-color: #f1f1f1;
 }
+
 .game-card {
   background-color: white;
   border: 1px solid #ddd;
@@ -175,20 +193,24 @@ a {
   max-width: calc(20% - 20px);
   height: auto;
 }
+
 .game-card:hover {
   transform: scale(1.1);
 }
+
 .game-card img {
   width: 100%;
   height: auto;
   object-fit: contain;
   cursor: pointer;
 }
+
 .game-card h3 {
   margin-top: 10px;
   font-size: 18px;
   cursor: pointer;
 }
+
 .game-card p {
   font-size: 14px;
   color: #666;
@@ -198,10 +220,12 @@ a {
 .game-page.blurred {
   user-select: none;
 }
+
 .game-page.blurred .game-list {
   filter: blur(5px);
   pointer-events: none;
 }
+
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -214,6 +238,7 @@ a {
   align-items: center;
   z-index: 1000;
 }
+
 .popup-card {
   align-items: center;
   justify-content: center;
@@ -226,13 +251,16 @@ a {
   position: relative;
   z-index: 1001;
 }
+
 .popup-card h2 {
   margin-bottom: 10px;
   margin-left: 120px;
 }
+
 .popup-card p {
   margin-top: 10px;
 }
+
 .play-button-popup {
   margin: 10px 120px;
   padding: 10px 20px;
@@ -244,9 +272,11 @@ a {
   border-radius: 8px;
   transition: all 0.3s ease;
 }
+
 .play-button-popup:hover {
   font-size: 1.1rem;
 }
+
 .close-btn {
   position: absolute;
   background: none;
@@ -265,6 +295,7 @@ a {
   justify-content: center;
   align-items: center;
 }
+
 .load-more-btn,
 .show-less-btn {
   display: flex;
@@ -280,11 +311,13 @@ a {
   border-radius: 8px;
   transition: all 0.3s ease;
 }
+
 .load-more-btn:hover,
 .show-less-btn:hover {
   background-color: #4d80a0;
   font-size: 1.1rem;
 }
+
 .play-button {
   margin: 10px;
   padding: 10px 20px;
@@ -296,6 +329,7 @@ a {
   border-radius: 8px;
   transition: all 0.3s ease;
 }
+
 .play-button:hover {
   background-color: #519cff;
   font-size: 1.1rem;
@@ -306,19 +340,23 @@ a {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .favorite-icon:hover,
 .favorite-icon.is-favorite {
   fill: gold;
   color: gold;
 }
+
 .main-container {
   padding: 10px;
 }
+
 .free-to-game,
 .free-to-game-1 {
   font-size: 24px;
   font-weight: bold;
 }
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -328,9 +366,11 @@ a {
   height: 120px;
   align-items: center;
 }
+
 .footer-p {
   margin-top: 50px;
 }
+
 .hamburger {
   display: none;
   font-size: 24px;
@@ -349,11 +389,13 @@ a {
   align-items: center;
   gap: 20px;
 }
+
 .filters-desktop {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
 }
+
 .mobile-filters {
   display: none;
   flex-direction: column;
@@ -368,6 +410,7 @@ a {
   width: 200px;
   font-family: Arial, sans-serif;
 }
+
 .dropdown-toggle {
   width: 100%;
   padding: 10px 12px;
@@ -377,6 +420,7 @@ a {
   text-align: left;
   border-radius: 4px;
 }
+
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -391,6 +435,7 @@ a {
   z-index: 999;
   border-radius: 0 0 4px 4px;
 }
+
 .dropdown-item {
   display: flex;
   align-items: center;
@@ -398,9 +443,11 @@ a {
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
+
 .dropdown-item:hover {
   background-color: #f5f5f5;
 }
+
 .dropdown-item input {
   margin-right: 8px;
 }
