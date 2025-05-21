@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import GameGrid from "../components/GameGrid";
 import Header from "../components/Header";
-import DropdownGenre from '../components/DropdownGenre'
-import DropdownPlatform from '../components/DropdownPlatform'
-import FavoriteToggle from '../components/FavoriteToggle'
+import DropdownGenre from "../components/DropdownGenre";
+import DropdownPlatform from "../components/DropdownPlatform";
+import FavoriteToggle from "../components/FavoriteToggle";
 const Home = ({ selectedGame, setSelectedGame }) => {
   const [selectedGenre, setSelectedGenre] = useState([]);
   const [selectedPlatform, setSelectedPlatform] = useState([]);
@@ -29,21 +29,21 @@ const Home = ({ selectedGame, setSelectedGame }) => {
     localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
   };
 
- const thisGenre = [
-     'mmorpg',
-     'shooter',
-     'strategy',
-     'moba',
-     'racing',
-     'sports',
-     'social',
-     'mmo',
-     'fantasy',
-     'fighting',
-     'action'
- ]
+  const thisGenre = [
+    "mmorpg",
+    "shooter",
+    "strategy",
+    "moba",
+    "racing",
+    "sports",
+    "social",
+    "mmo",
+    "fantasy",
+    "fighting",
+    "action",
+  ];
 
- const thisPlatform = ['browser', 'pc']
+  const thisPlatform = ["browser", "pc"];
 
   // If the user checks one of the checkboxes,
   // the handler adds the tag into selectedGenre/selectedPlatform.
@@ -68,39 +68,48 @@ const Home = ({ selectedGame, setSelectedGame }) => {
   };
 
   return (
-      <div>
-          <Header />
-          <div className="main-layout">
-              <div className="filters">
-                  <DropdownGenre
-                      options={thisGenre}
-                      selected={selectedGenre}
-                      onChange={GenreChange}
-                  />
-                  <DropdownPlatform
-                      options={thisPlatform}
-                      selected={selectedPlatform}
-                      onChange={PlatformChange}
-                  />
+    <div>
+      <Header
+        thisGenre={thisGenre}
+        thisPlatform={thisPlatform}
+        selectedGenre={selectedGenre}
+        selectedPlatform={selectedPlatform}
+        GenreChange={GenreChange}
+        PlatformChange={PlatformChange}
+        showFavorites={showFavorites}
+        setShowFavorites={setShowFavorites}
+      />
+      <div className="main-layout">
+        <div className="filters filters-desktop">
+          <DropdownGenre
+            options={thisGenre}
+            selected={selectedGenre}
+            onChange={GenreChange}
+          />
+          <DropdownPlatform
+            options={thisPlatform}
+            selected={selectedPlatform}
+            onChange={PlatformChange}
+          />
 
-                  <FavoriteToggle
-                      showFavorites={showFavorites}
-                      setShowFavorites={setShowFavorites}
-                  />
-              </div>
-              <GameGrid
-                  selectedGenre={selectedGenre}
-                  selectedPlatform={selectedPlatform}
-                  favorites={favorites}
-                  toggleFavorite={toggleFavorite}
-                  showFavorites={showFavorites}
-                  selectedGame={selectedGame}
-                  setSelectedGame={setSelectedGame}
-              />
-          </div>
-          <Footer />
+          <FavoriteToggle
+            showFavorites={showFavorites}
+            setShowFavorites={setShowFavorites}
+          />
+        </div>
+        <GameGrid
+          selectedGenre={selectedGenre}
+          selectedPlatform={selectedPlatform}
+          favorites={favorites}
+          toggleFavorite={toggleFavorite}
+          showFavorites={showFavorites}
+          selectedGame={selectedGame}
+          setSelectedGame={setSelectedGame}
+        />
       </div>
-  )
+      <Footer />
+    </div>
+  );
 };
 
 export default Home;
