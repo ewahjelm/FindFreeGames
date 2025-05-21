@@ -95,6 +95,7 @@ const Home = ({ selectedGame, setSelectedGame }) => {
           <FavoriteToggle
             showFavorites={showFavorites}
             setShowFavorites={setShowFavorites}
+            favorites={favorites}
           />
         </div>
         <GameGrid
