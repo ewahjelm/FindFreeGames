@@ -11,10 +11,11 @@ function About() {
           <img src="./public/girl.jpg" />
 
           <div className="right">
-            <p className="subtitle">
-              Have you ever grown tired of a game you used to love? Then felt
-              there might be a new fun game out there but don't know where to look?
-              Then you're in the right place, my friend! <br />
+            <h3 className="standard-h3">Have you ever grown tired of a game you used to love? <br /></h3>
+            <p className="p-text">
+              Felt there might be a new fun game out there but don't know where to look?<br />
+              Then you're in the right place, my friend! 
+              </p><p className="p-text">
               What would you say if I told you that you could play for free? <br />
               Our site is powered by the FreeToGame API, which provides a
               continuously updated list of free-to-play games available for PC and web

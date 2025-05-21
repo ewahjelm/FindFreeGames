@@ -17,7 +17,7 @@ function Start() {
           <img src="/public/bg.jpg" alt="gamer-illustration" />
 
           <div className="right">
-            <p className="subtitle">
+            <p className="p-text">
               We track the best free PC and browser games <br /> so you
               don’t have to
             </p>
