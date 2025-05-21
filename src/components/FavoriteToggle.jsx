@@ -1,7 +1,7 @@
 import { FaStar } from 'react-icons/fa'
 
 
-const FavoriteToggle = ({ showFavorites, setShowFavorites }) => {
+const FavoriteToggle = ({ showFavorites, setShowFavorites, favorites }) => {
     return (
         <div
             onClick={() => setShowFavorites(!showFavorites)}
@@ -23,7 +23,7 @@ const FavoriteToggle = ({ showFavorites, setShowFavorites }) => {
             }}
         >
             <FaStar color={showFavorites ? 'gold' : 'gray'} size={24} />
-            {showFavorites ? 'Favorites Only' : 'All Games'}
+            <span>{favorites.length}</span>
         </div>
     )
 }
