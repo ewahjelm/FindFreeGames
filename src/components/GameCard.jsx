@@ -14,7 +14,8 @@ const GameCard = ({ game, isFavorite, toggleFavorite, onClick }) => {
         width="150" // inline css !!
       />
       <h3 titel={game.title}>
-        {game.title.length > 10 ? game.title.slice(0, 10) + "..." : game.title}
+        {/* {game.title.length > 10 ? game.title.slice(0, 10) + "..." : game.title} */}
+        {game.title.length > 18 ? game.title.slice(0, 18) + "..." : game.title}
       </h3>
       <span
         onClick={(e) => {
