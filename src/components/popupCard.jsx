@@ -1,5 +1,3 @@
-import React from "react";
-
 const PopupCard = ({ game, onClose }) => {
   return (
     <div className="popup-overlay">
@@ -11,6 +9,7 @@ const PopupCard = ({ game, onClose }) => {
         <img src={game.thumbnail} alt={game.title} />
         <p>{game.short_description}</p>
         <button
+
           className="play-button-popup"
           onClick={() => window.open(game.game_url, "_blank")}
         >
