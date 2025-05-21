@@ -14,6 +14,7 @@ function Header({
   PlatformChange,
   showFavorites,
   setShowFavorites,
+  favorites,
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen((prev) => !prev);
@@ -52,6 +53,7 @@ function Header({
               <FavoriteToggle
                 showFavorites={showFavorites}
                 setShowFavorites={setShowFavorites}
+                favorites={favorites}
               />
             </div>
           </nav>

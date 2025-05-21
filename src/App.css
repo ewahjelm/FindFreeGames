@@ -337,6 +337,8 @@ a {
 }
 .filters-desktop {
   display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
 .mobile-filters {
   display: none;

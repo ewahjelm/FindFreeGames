@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import DropdownGenre from "../components/DropdownGenre";
 import DropdownPlatform from "../components/DropdownPlatform";
 import FavoriteToggle from "../components/FavoriteToggle";
+
 const Home = ({ selectedGame, setSelectedGame }) => {
   const [selectedGenre, setSelectedGenre] = useState([]);
   const [selectedPlatform, setSelectedPlatform] = useState([]);
