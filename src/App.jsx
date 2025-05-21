@@ -1,4 +1,5 @@
 import { useState } from "react"; // Lägg till denna
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Start from "./pages/Start";
 import Home from "./pages/Home";
 import About from "./pages/About";
