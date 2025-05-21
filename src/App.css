@@ -25,6 +25,16 @@ game-image
 
   margin-left: 30%;
 }
+
+.content-header-start {
+  font-family: Climate Crisis;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 100%;
+  letter-spacing: 10%;
+  text-align: center;
+  color: black;
+}
 .header-content {
   font-family: Climate Crisis;
   font-weight: 400;
