@@ -288,6 +288,14 @@ a:hover {
 .footer-p {
   margin-top: 50px;
 }
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
 
 /* --------------------
    RESPONSIVE DESIGN
