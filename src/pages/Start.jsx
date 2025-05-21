@@ -5,7 +5,7 @@ function Start() {
   return (
       <div className="content">
  <div className="header-start">
-              <h1 className="content-header">FIND FREE GAMES TO PLAY</h1>
+              <h1 className="content-header-start">FIND FREE GAMES TO PLAY</h1>
 </div>
           <div className="content-body">
 
