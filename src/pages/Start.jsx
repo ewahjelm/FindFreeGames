@@ -3,21 +3,12 @@ import { Link } from "react-router-dom";
 
 function Start() {
   return (
-
     <div className="content">
       <div className="header-start">
-        <h1 className="header-content">FIND FREE GAMES TO PLAY</h1>
+        <h1 className="content-header-start">FIND FREE GAMES TO PLAY</h1>
       </div>
       <div className="content-body">
         <img src="./public/bg.jpg" alt="gamer-illustration" />
-
-      <div className="content">
- <div className="header-start">
-              <h1 className="content-header-start">FIND FREE GAMES TO PLAY</h1>
-</div>
-          <div className="content-body">
-
-              <img src="./public/bg.jpg" alt="gamer-illustration" />
 
         <div className="right">
           <p className="subtitle">
