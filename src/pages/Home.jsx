@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import GameGrid from "../components/GameGrid";
-import { gamesData } from "../data/games";
 import Header from "../components/Header";
 
 const Home = ({ selectedGame, setSelectedGame }) => {
