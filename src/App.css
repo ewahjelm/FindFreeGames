@@ -104,6 +104,9 @@ a:hover {
   letter-spacing: 0%;
 
   text-align: center;
+  padding-top: 20px;
+  height: 74px;
+  line-height: normal;
 }
 
 /* Layout and navigation */
@@ -224,7 +227,7 @@ a:hover {
   padding: 20px;
   border-radius: 12px;
   max-width: 400px;
-  height: 390px;
+  height: 400px;
   width: 90%;
   position: relative;
   z-index: 1001;
@@ -240,7 +243,7 @@ a:hover {
 }
 
 .play-button-popup {
-  margin: 20px 120px;
+  margin: 10px 120px;
   padding: 10px 20px;
   font-size: 1rem;
   cursor: pointer;
@@ -257,7 +260,7 @@ a:hover {
 
 .close-btn {
   position: absolute;
-  background-color: lightgrey;
+  background: none;
   border: none;
   top: 10px;
   right: 15px;
