@@ -59,7 +59,7 @@ a {
   font-family: Montserrat;
   font-weight: 500;
   font-style: italic;
-  font-size: 24px;
+  font-size: 16px;
   text-align: center;
 }
 .content-body img {
@@ -74,6 +74,7 @@ a {
   justify-content: center;
   text-align: center;
   gap: 16px;
+  width: 500px;
 }
 .start-btn {
   background-color: #519cff;
@@ -457,6 +458,8 @@ a {
 
   .right {
     align-items: center;
+    width: 300px;
+    margin-bottom: 20px;
   }
 
   .nav {
