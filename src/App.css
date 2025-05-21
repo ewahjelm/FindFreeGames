@@ -1,4 +1,4 @@
-/* 
+/*
 klasser som finns men inte stylats:
 play-button
 game-image
@@ -117,7 +117,7 @@ a:hover {
 }
 .main-layout {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
 }
 .nav {
@@ -380,4 +380,56 @@ a:hover {
   .footer {
     font-size: 10px;
   }
+}
+.filters{
+    margin: 40px;
+    ;display: flex;
+flex-direction: row;
+justify-content: space-between; }
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  font-family: Arial, sans-serif;
+}
+
+.dropdown-toggle {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 4px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  border-radius: 0 0 4px 4px;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown-item input {
+  margin-right: 8px;
 }
