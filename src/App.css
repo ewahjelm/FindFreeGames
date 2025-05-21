@@ -69,6 +69,7 @@ a {
   font-weight: 500;
   font-style: italic;
   font-size: 16px;
+  line-height: 1.5;
   /* text-align: center; */
 }
 .content-body img {
@@ -87,6 +88,7 @@ a {
   text-align: left;
   gap: 16px;
   width: 500px;
+  padding: 20px;
 }
 .start-btn {
   background-color: #519cff;
