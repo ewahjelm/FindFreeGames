@@ -225,6 +225,11 @@ a:hover {
   user-select: none;
 }
 
+.game-page.blurred .game-list {
+  filter: blur(5px);
+  pointer-events: none; /* förhindrar klick på bakgrunden */
+}
+
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -241,17 +246,44 @@ a:hover {
 .popup-card {
   align-items: center;
   justify-content: center;
-  background: #f1f1f1;
+  background: lightgray;
   padding: 20px;
   border-radius: 12px;
-  max-width: 500px;
+  max-width: 400px;
+  height: 390px;
   width: 90%;
   position: relative;
   z-index: 1001;
 }
 
+.popup-card h2 {
+  margin-bottom: 10px;
+  margin-left: 120px;
+}
+
+.popup-card p {
+  margin-top: 10px;
+}
+
+.play-button-popup {
+  margin: 20px 120px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #519cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.play-button-popup:hover {
+  font-size: 1.1rem;
+}
+
 .close-btn {
   position: absolute;
+  background-color: lightgrey;
   border: none;
   top: 10px;
   right: 15px;
