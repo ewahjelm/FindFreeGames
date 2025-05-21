@@ -9,7 +9,8 @@ const PopupCard = ({ game, onClose }) => {
         <img src={game.thumbnail} alt={game.title} />
         <p>{game.short_description}</p>
         <button
-          className="play-button"
+
+          className="play-button-popup"
           onClick={() => window.open(game.game_url, "_blank")}
         >
           Play Now

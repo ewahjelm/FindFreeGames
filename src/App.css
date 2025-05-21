@@ -1,4 +1,4 @@
-/* 
+/*
 klasser som finns men inte stylats:
 play-button
 game-image
@@ -92,6 +92,10 @@ a {
   font-weight: 500;
   font-style: italic;
   font-size: 24px;
+
+  line-height: 74px;
+  letter-spacing: 0%;
+
   text-align: center;
   display: flex;
   align-items: center;
@@ -112,9 +116,10 @@ a {
   align-items: center;
   padding: 30px;
 }
+
 .main-layout {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
 }
 .nav {
@@ -189,6 +194,12 @@ a {
 .game-page.blurred {
   user-select: none;
 }
+
+.game-page.blurred .game-list {
+  filter: blur(5px);
+  pointer-events: none; /* förhindrar klick på bakgrunden */
+}
+
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -204,16 +215,45 @@ a {
 .popup-card {
   align-items: center;
   justify-content: center;
+  background: lightgray;
   background: #9c9c9c;
   padding: 20px;
   border-radius: 12px;
-  max-width: 500px;
+  max-width: 400px;
+  height: 400px;
   width: 90%;
   position: relative;
   z-index: 1001;
 }
+
+.popup-card h2 {
+  margin-bottom: 10px;
+  margin-left: 120px;
+}
+
+.popup-card p {
+  margin-top: 10px;
+}
+
+.play-button-popup {
+  margin: 10px 120px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #519cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.play-button-popup:hover {
+  font-size: 1.1rem;
+}
+
 .close-btn {
   position: absolute;
+  background: none;
   border: none;
   top: 10px;
   right: 15px;
@@ -426,4 +466,57 @@ a {
   .footer {
     font-size: 10px;
   }
+}
+.filters {
+  margin: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  font-family: Arial, sans-serif;
+}
+
+.dropdown-toggle {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 4px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  border-radius: 0 0 4px 4px;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown-item input {
+  margin-right: 8px;
 }
