@@ -43,14 +43,14 @@ a {
 }
 
 /* Left side styling */
-.content-header {
+/* .content-header {
   font-family: Montserrat;
   font-weight: 400;
   font-size: 26px;
   line-height: 100%;
   text-align: center;
   margin: 10px;
-}
+} */
 .content-body {
   display: flex;
   flex-direction: row;
