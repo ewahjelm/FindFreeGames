@@ -49,6 +49,7 @@ a {
   font-size: 48px;
   line-height: 100%;
   text-align: center;
+  margin: 10px;
 }
 .content-body {
   display: flex;
