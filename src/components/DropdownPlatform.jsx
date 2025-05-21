@@ -5,7 +5,7 @@ const DropdownPlatform = ({ options, selected, onChange }) => {
     const [open, setOpen] = useState(false)
 
     return (
-        <div className="dropdown">
+        <div className="dropdown" onMouseLeave={() => setOpen(false)}>
             <button onClick={() => setOpen(!open)} className="dropdown-toggle">
                 Select Platform ▼
             </button>
