@@ -499,7 +499,7 @@ a {
 }
 
 /* Small mobile */
-@media (max-width: 480px) {
+@media (max-width: 389px) {
   .hamburger {
     display: none;
   }
